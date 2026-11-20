@@ -20,7 +20,7 @@ export default async function Dashboard() {
           <a href="/meta-ads">Meta Ads</a>
           <a href="/google-ads">Google Ads</a>
           <a href="#usuarios">Usuários</a>
-          <a href="#administracao">Administração</a>
+          <a href="/admin">Administração</a>
         </nav>
       </aside>
       <section className="main">

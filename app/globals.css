@@ -85,3 +85,37 @@ button, input { font: inherit; }
 @media (max-width: 760px) { .auth { padding: 16px; } .login-card { min-height: 520px; } .login-form { min-height: 520px; padding: 38px 28px; } .login-heading h1 { font-size: 30px; } }
 @media (max-width: 900px) { .ads-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .ads-main { padding: 24px 16px 40px; } .ads-header { align-items: flex-start; } .ads-header-brand { align-items: flex-start; flex-direction: column; } .ads-logo { width: 135px; } .ads-title { font-size: 28px; } .ads-grid { grid-template-columns: 1fr; } .ads-panel-heading { align-items: flex-start; flex-direction: column; gap: 8px; } }
+.admin-shell { min-height: 100vh; background: #f6f8f7; }
+.admin-main { max-width: 1180px; margin: 0 auto; padding: 34px 28px 54px; }
+.admin-header { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 24px; }
+.admin-brand { display: flex; align-items: center; gap: 14px; }
+.admin-logo { width: 118px; height: 44px; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
+.admin-title { margin: 0; color: #243934; font-family: Georgia, "Times New Roman", serif; font-size: 32px; font-weight: 500; }
+.admin-subtitle { margin: 7px 0 0; color: #85958f; }
+.admin-back { color: #6d817c; text-decoration: none; font-size: 14px; }
+.admin-back:hover { color: #365c54; }
+.admin-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 14px; }
+.admin-stat { background: #fff; border: 1px solid #e5ebe8; border-radius: 14px; padding: 18px; }
+.admin-stat-label { color: #84958f; font-size: 13px; }
+.admin-stat-value { margin-top: 10px; color: #29433d; font-size: 24px; font-weight: 700; }
+.admin-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 14px; }
+.admin-panel { background: #fff; border: 1px solid #e5ebe8; border-radius: 14px; padding: 22px; }
+.admin-panel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.admin-panel h2 { margin: 0; color: #29433d; font-size: 17px; }
+.admin-search { width: 220px; height: 38px; border: 1px solid #dde7e3; border-radius: 8px; padding: 0 11px; background: #fbfcfc; outline: none; }
+.admin-table { width: 100%; border-collapse: collapse; }
+.admin-table th, .admin-table td { padding: 13px 8px; border-bottom: 1px solid #edf1ef; text-align: left; }
+.admin-table th { color: #879791; font-size: 12px; font-weight: 700; }
+.admin-table td { color: #40554f; font-size: 14px; }
+.admin-user { display: flex; align-items: center; gap: 10px; }
+.admin-avatar { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: #edf4f1; color: #365c54; font-weight: 800; }
+.admin-role { display: inline-flex; border-radius: 999px; padding: 5px 9px; background: #edf4f1; color: #557067; font-size: 12px; font-weight: 700; }
+.admin-role.admin { background: #365c54; color: #fff; }
+.admin-settings { display: grid; gap: 10px; }
+.admin-setting { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 58px; border: 1px solid #edf1ef; border-radius: 10px; padding: 10px 12px; }
+.admin-setting strong { display: block; color: #40554f; font-size: 14px; }
+.admin-setting span { display: block; margin-top: 3px; color: #93a09c; font-size: 12px; }
+.admin-toggle { width: 38px; height: 22px; border: 0; border-radius: 999px; background: #365c54; }
+.admin-toggle.off { background: #d7dfdc; }
+@media (max-width: 900px) { .admin-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .admin-grid { grid-template-columns: 1fr; } }
+@media (max-width: 620px) { .admin-main { padding: 24px 16px 40px; } .admin-header { align-items: flex-start; } .admin-brand { align-items: flex-start; flex-direction: column; } .admin-stats { grid-template-columns: 1fr; } .admin-panel-header { align-items: flex-start; flex-direction: column; } .admin-search { width: 100%; } .admin-table th:nth-child(3), .admin-table td:nth-child(3) { display: none; } }
