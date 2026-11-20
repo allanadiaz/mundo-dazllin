@@ -30,23 +30,42 @@ export default function LoginPage() {
 
   return (
     <main className="auth">
-      <form className="auth-box" onSubmit={signIn}>
-        <img className="auth-logo" src="/dazllin-logo.png" alt="Dazllin" />
-        <h1>Bem-vindo</h1>
-        <p>Entre no painel Mundo Dazllin</p>
-        <label className="field">
-          Email
-          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
-        </label>
-        <label className="field">
-          Senha
-          <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} required />
-        </label>
-        {error && <div className="alert">{error}</div>}
-        <button className="primary" type="submit" disabled={loading}>
-          {loading ? "Entrando..." : "Entrar"}
-        </button>
-      </form>
+      <section className="login-card">
+        <aside className="login-brand">
+          <img className="auth-logo" src="/dazllin-logo.png" alt="Dazllin" />
+          <div className="login-message">
+            <span className="login-eyebrow">Área exclusiva</span>
+            <h2>Gestão clara para decisões melhores.</h2>
+            <p>Acompanhe vendas, resultados financeiros e indicadores da sua operação.</p>
+          </div>
+          <div className="login-decoration" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
+        </aside>
+
+        <form className="login-form" onSubmit={signIn}>
+          <div className="login-heading">
+            <span className="login-badge">Bem-vindo(a)</span>
+            <h1>Acesse seu painel</h1>
+            <p>Use seus dados de acesso da Dazllin.</p>
+          </div>
+          <label className="field">
+            Email
+            <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="nome@empresa.com" required />
+          </label>
+          <label className="field">
+            Senha
+            <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Digite sua senha" required />
+          </label>
+          {error && <div className="alert">{error}</div>}
+          <button className="primary" type="submit" disabled={loading}>
+            {loading ? "Entrando..." : "Entrar no painel"}
+          </button>
+          <p className="login-help">Acesso autorizado apenas para administradores e usuários cadastrados.</p>
+        </form>
+      </section>
     </main>
   );
 }
