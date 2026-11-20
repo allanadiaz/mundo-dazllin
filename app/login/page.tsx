@@ -31,25 +31,11 @@ export default function LoginPage() {
   return (
     <main className="auth">
       <section className="login-card">
-        <aside className="login-brand">
-          <img className="auth-logo" src="/dazllin-logo.png" alt="Dazllin" />
-          <div className="login-message">
-            <span className="login-eyebrow">Área exclusiva</span>
-            <h2>Gestão clara para decisões melhores.</h2>
-            <p>Acompanhe vendas, resultados financeiros e indicadores da sua operação.</p>
-          </div>
-          <div className="login-decoration" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
-        </aside>
-
         <form className="login-form" onSubmit={signIn}>
+          <img className="login-logo" src="/dazllin-logo.png" alt="Dazllin" />
           <div className="login-heading">
-            <span className="login-badge">Bem-vindo(a)</span>
-            <h1>Acesse seu painel</h1>
-            <p>Use seus dados de acesso da Dazllin.</p>
+            <h1>Bem-vindo à Dazllin</h1>
+            <p>Acesse o painel da sua clínica.</p>
           </div>
           <label className="field">
             Email
