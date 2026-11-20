@@ -32,7 +32,7 @@ export default function GoogleAdsPage() {
               <div className="ads-empty-icon">G</div>
               <h3>Conecte sua conta Google Ads</h3>
               <p>Autorize a Dazllin a ler campanhas, custos e conversões da conta selecionada.</p>
-              <a className="ads-connect" href="https://ads.google.com/" target="_blank" rel="noreferrer">Abrir Google Ads</a>
+              <a className="ads-connect" href="https://ads.google.com/aw/campaigns?ocid=1394810443" target="_blank" rel="noreferrer">Abrir conta Google Ads</a>
             </div>
           </div>
         </section>

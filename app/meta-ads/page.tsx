@@ -70,7 +70,7 @@ export default function MetaAdsPage() {
               <div className="ads-empty-icon">M</div>
               <h3>Conecte sua conta Meta</h3>
               <p>Autorize a Dazllin a ler campanhas, gastos e resultados da conta selecionada.</p>
-              <a className="ads-connect" href="https://business.facebook.com/" target="_blank" rel="noreferrer">Abrir Meta Business</a>
+              <a className="ads-connect" href="https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=1570414770771585" target="_blank" rel="noreferrer">Abrir conta Meta Ads</a>
             </div>
           </div>
         </section>
