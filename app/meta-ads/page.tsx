@@ -1,4 +1,42 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+type MetaData = {
+  spend?: number;
+  impressions?: number;
+  reach?: number;
+  clicks?: number;
+  conversions?: number;
+  costPerConversion?: number;
+  connected: boolean;
+};
+
 export default function MetaAdsPage() {
+  const [data, setData] = useState<MetaData>({ connected: false });
+
+  useEffect(() => {
+    fetch("/api/meta-ads")
+      .then(async (response) => ({
+        response,
+        body: await response.json(),
+      }))
+      .then(({ response, body }) => {
+        if (response.ok) setData({ ...body, connected: true });
+      })
+      .catch(() => setData({ connected: false }));
+  }, []);
+
+  const formatCurrency = (value?: number) =>
+    typeof value === "number"
+      ? value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+      : "Aguardando conexão";
+
+  const formatNumber = (value?: number) =>
+    typeof value === "number"
+      ? value.toLocaleString("pt-BR")
+      : "Aguardando conexão";
+
   return (
     <main className="ads-shell">
       <div className="ads-main">
@@ -13,13 +51,13 @@ export default function MetaAdsPage() {
           <a className="ads-back" href="/">Voltar ao painel</a>
         </header>
 
-        <div className="ads-status"><span className="ads-status-dot" /> Conta ainda não conectada</div>
+        <div className="ads-status"><span className="ads-status-dot" /> {data.connected ? "Conta conectada" : "Conta ainda não conectada"}</div>
 
         <section className="ads-grid" style={{ marginTop: 16 }}>
-          <article className="ads-card"><div className="ads-card-label">Investimento</div><div className="ads-card-value pending">Aguardando conexão</div></article>
-          <article className="ads-card"><div className="ads-card-label">Conversões</div><div className="ads-card-value pending">Aguardando conexão</div></article>
-          <article className="ads-card"><div className="ads-card-label">Custo por resultado</div><div className="ads-card-value pending">Aguardando conexão</div></article>
-          <article className="ads-card"><div className="ads-card-label">Retorno sobre investimento</div><div className="ads-card-value pending">Aguardando conexão</div></article>
+          <article className="ads-card"><div className="ads-card-label">Investimento</div><div className={`ads-card-value ${data.connected ? "" : "pending"}`}>{formatCurrency(data.spend)}</div></article>
+          <article className="ads-card"><div className="ads-card-label">Conversões</div><div className={`ads-card-value ${data.connected ? "" : "pending"}`}>{formatNumber(data.conversions)}</div></article>
+          <article className="ads-card"><div className="ads-card-label">Custo por resultado</div><div className={`ads-card-value ${data.connected ? "" : "pending"}`}>{formatCurrency(data.costPerConversion)}</div></article>
+          <article className="ads-card"><div className="ads-card-label">Resultados / alcance</div><div className={`ads-card-value ${data.connected ? "" : "pending"}`}>{formatNumber(data.reach)}</div></article>
         </section>
 
         <section className="ads-panel">
