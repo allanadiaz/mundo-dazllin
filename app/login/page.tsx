@@ -31,7 +31,7 @@ export default function LoginPage() {
   return (
     <main className="auth">
       <form className="auth-box" onSubmit={signIn}>
-        <div className="brand-mark">M</div>
+        <img className="auth-logo" src="/dazllin-logo.png" alt="Dazllin" />
         <h1>Bem-vindo</h1>
         <p>Entre no painel Mundo Dazllin</p>
         <label className="field">

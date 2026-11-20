@@ -12,7 +12,7 @@ export default async function Dashboard() {
   return (
     <main className="shell">
       <aside className="sidebar">
-        <div className="brand"><span className="brand-mark">M</span> Mundo Dazllin</div>
+        <div className="brand"><img className="brand-logo" src="/dazllin-logo.png" alt="Dazllin" /></div>
         <nav className="nav">
           <a href="/">Resumo</a>
           <a href="#financeiro">Financeiro</a>
