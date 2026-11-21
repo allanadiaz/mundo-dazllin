@@ -119,3 +119,69 @@ button, input { font: inherit; }
 .admin-toggle.off { background: #d7dfdc; }
 @media (max-width: 900px) { .admin-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .admin-grid { grid-template-columns: 1fr; } }
 @media (max-width: 620px) { .admin-main { padding: 24px 16px 40px; } .admin-header { align-items: flex-start; } .admin-brand { align-items: flex-start; flex-direction: column; } .admin-stats { grid-template-columns: 1fr; } .admin-panel-header { align-items: flex-start; flex-direction: column; } .admin-search { width: 100%; } .admin-table th:nth-child(3), .admin-table td:nth-child(3) { display: none; } }
+.shell { grid-template-columns: 230px 1fr; background: #f7f7f5; }
+.sidebar { background: #3e1f2b; border: 0; padding: 28px 18px 18px; color: #fff; display: flex; flex-direction: column; }
+.clinic-brand { display: grid; gap: 2px; margin: 0 10px 34px; }
+.clinic-name { font-family: Georgia, "Times New Roman", serif; font-size: 29px; letter-spacing: -.04em; }
+.clinic-type { color: #d1bfc5; font-size: 8px; letter-spacing: .18em; }
+.nav { gap: 3px; }
+.nav-section { margin: 14px 10px 5px; color: #9e7e88; font-size: 9px; letter-spacing: .13em; }
+.nav a { color: #cfbec4; border-radius: 8px; padding: 10px 12px; font-size: 13px; }
+.nav a.active { background: #5a3541; color: #fff; }
+.sidebar-footer { margin-top: auto; display: grid; gap: 2px; border-top: 1px solid #5a3a44; padding: 18px 10px 2px; }
+.sidebar-footer span { font-size: 13px; }
+.sidebar-footer small { color: #baa5ac; font-size: 10px; }
+.main { background: #fafaf8; padding: 28px 34px 40px; }
+.topbar { margin-bottom: 20px; }
+.breadcrumb { color: #a9aaa5; font-size: 11px; margin-bottom: 6px; }
+.topbar h1 { font-family: Georgia, "Times New Roman", serif; font-size: 25px; font-weight: 500; color: #30282a; }
+.topbar p { font-size: 12px; color: #9a9a94; }
+.topbar-actions { display: flex; align-items: center; gap: 8px; }
+.period-button, .icon-button { height: 36px; border: 1px solid #ecece7; background: #fff; border-radius: 8px; color: #777870; }
+.period-button { padding: 0 12px; }
+.icon-button { width: 36px; }
+.profile-chip { display: flex; align-items: center; gap: 9px; }
+.profile-chip div:first-child { display: grid; text-align: right; }
+.profile-chip strong { font-size: 11px; color: #4d4d48; }
+.profile-chip span { font-size: 9px; color: #aaa9a2; }
+.avatar { width: 36px; height: 36px; background: #edeae5; color: #655d57; }
+.cards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.card { border: 1px solid #eeeee8; border-radius: 10px; box-shadow: 0 4px 18px rgba(67, 54, 48, .025); }
+.highlight-card { background: linear-gradient(135deg, #633744, #8a5a67); color: #fff; }
+.highlight-card .card-title, .highlight-card .trend { color: #e7d9de; }
+.card-title, .card-label-inline { color: #9a9a94; font-size: 10px; }
+.card-value { color: #37332f; font-size: 23px; margin-top: 8px; }
+.highlight-card .card-value { color: #fff; }
+.trend { color: #ae8070; font-size: 9px; }
+.grid { grid-template-columns: 1.35fr .65fr; gap: 12px; margin-top: 12px; }
+.bottom-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 12px; margin-top: 12px; }
+.card-header { display: flex; align-items: flex-start; justify-content: space-between; }
+.card-value.small { font-size: 20px; }
+.card-period, .card-link { color: #a68a91; font-size: 9px; text-decoration: none; }
+.card-subtitle { color: #aaa9a3; font-size: 9px; margin: 3px 0 0; }
+.line-chart { position: relative; height: 220px; margin-top: 8px; padding-left: 38px; }
+.line-chart svg { width: calc(100% - 10px); height: 180px; }
+.chart-line { stroke: #efefe9; stroke-width: 1; }
+.chart-y { position: absolute; left: 0; top: 5px; height: 180px; display: flex; flex-direction: column; justify-content: space-between; color: #b3b2aa; font-size: 8px; }
+.chart-x { display: flex; justify-content: space-between; color: #b3b2aa; font-size: 8px; padding: 0 8px 0 10px; }
+.campaign-list { display: grid; gap: 5px; }
+.campaign-row { min-height: 82px; display: grid; grid-template-columns: 1fr 62px 46px; align-items: center; border-top: 1px solid #f1f1ec; }
+.campaign-row strong { display: block; color: #4d4b47; font-size: 11px; }
+.campaign-row span { color: #aaa9a3; font-size: 8px; }
+.campaign-row b { display: block; color: #aaa9a3; font-size: 8px; }
+.campaign-status { justify-self: start; color: #7d8d77; font-size: 8px; }
+.opportunity-table td span { display: block; color: #aaa9a3; font-size: 8px; margin-top: 3px; }
+.status-chip { display: inline-flex !important; border-radius: 999px; padding: 5px 8px; font-size: 8px !important; }
+.status-chip.contact { background: #f2ecee; color: #84616b; }
+.status-chip.scheduled { background: #edf3ec; color: #71816d; }
+.conciliation-value { display: flex; align-items: baseline; gap: 8px; }
+.conciliation-value strong { font-size: 28px; color: #4b4843; }
+.conciliation-value span { color: #aaa9a3; font-size: 9px; }
+.progress-bar { height: 5px; background: #eeeae5; border-radius: 999px; margin: 10px 0 12px; overflow: hidden; }
+.progress-bar span { display: block; height: 100%; background: #9b6875; }
+.conciliation-list { display: grid; gap: 7px; }
+.conciliation-list div { display: flex; justify-content: space-between; border-top: 1px solid #f1f1ec; padding-top: 8px; }
+.conciliation-list span { color: #aaa9a3; font-size: 9px; }
+.conciliation-list b { color: #62615b; font-size: 9px; }
+@media (max-width: 1100px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .grid, .bottom-grid { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .shell { grid-template-columns: 78px 1fr; } .sidebar { padding: 20px 8px; } .clinic-brand { margin: 0 4px 28px; } .clinic-name { font-size: 16px; } .clinic-type, .nav-section, .nav a:not(.active), .sidebar-footer { display: none; } .nav a.active { font-size: 0; height: 40px; } .nav a.active::before { content: "•"; font-size: 18px; } .main { padding: 20px 16px; } .topbar-actions .period-button, .profile-chip div:first-child { display: none; } .cards { grid-template-columns: 1fr 1fr; } }
