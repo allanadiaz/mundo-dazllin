@@ -13,8 +13,7 @@ export default async function Dashboard() {
     <main className="shell">
       <aside className="sidebar">
         <div className="clinic-brand">
-          <span className="clinic-name">Dazllin</span>
-          <span className="clinic-type">GESTÃO DA CLÍNICA</span>
+          <img className="clinic-logo" src="/dazllin-logo.png" alt="Dazllin" />
         </div>
         <nav className="nav">
           <div className="nav-section">VISÃO GERAL</div>
